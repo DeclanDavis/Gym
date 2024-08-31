@@ -1,0 +1,119 @@
+[{
+    "_id": {
+        "$oid": "663112c19a201cca3666b9db"
+    },
+    "title": "Mr",
+    "firstName": "Homer",
+    "lastName": "Simpson",
+    "emailAddress": "homer.simpson@gmail.com",
+    "premiumMembership": false,
+    "createdAt": {
+        "$date": "2024-04-30T15:48:17.605Z"
+    },
+    "updatedAt": {
+        "$date": "2024-05-01T11:09:00.951Z"
+    },
+    "__v": 0
+},
+{
+    "_id": {
+        "$oid": "6632197f5cab47a1aaa6f7cb"
+    },
+    "title": "Mr",
+    "firstName": "Bart",
+    "lastName": "Simpson",
+    "emailAddress": "bart.simpson@gmail.com",
+    "premiumMembership": true,
+    "createdAt": {
+        "$date": "2024-05-01T10:29:19.062Z"
+    },
+    "updatedAt": {
+        "$date": "2024-05-01T10:29:19.062Z"
+    },
+    "__v": 0
+},
+{
+    "_id": {
+        "$oid": "6632198d5cab47a1aaa6f7cd"
+    },
+    "title": "Mr",
+    "firstName": "Abe",
+    "lastName": "Simpson",
+    "emailAddress": "abe.simpson@gmail.com",
+    "premiumMembership": false,
+    "createdAt": {
+        "$date": "2024-05-01T10:29:33.653Z"
+    },
+    "updatedAt": {
+        "$date": "2024-05-01T10:29:33.653Z"
+    },
+    "__v": 0
+},
+{
+    "_id": {
+        "$oid": "663219a15cab47a1aaa6f7cf"
+    },
+    "title": "Mrs",
+    "firstName": "Marge",
+    "lastName": "Simpson",
+    "emailAddress": "marge.simpson@gmail.com",
+    "premiumMembership": false,
+    "createdAt": {
+        "$date": "2024-05-01T10:29:53.629Z"
+    },
+    "updatedAt": {
+        "$date": "2024-05-01T10:29:53.629Z"
+    },
+    "__v": 0
+},
+{
+    "_id": {
+        "$oid": "663219b25cab47a1aaa6f7d1"
+    },
+    "title": "Ms",
+    "firstName": "Lisa",
+    "lastName": "Simpson",
+    "emailAddress": "lisa.simpson@gmail.com",
+    "premiumMembership": true,
+    "createdAt": {
+        "$date": "2024-05-01T10:30:10.217Z"
+    },
+    "updatedAt": {
+        "$date": "2024-05-01T10:30:10.217Z"
+    },
+    "__v": 0
+},
+{
+    "_id": {
+        "$oid": "663225f6a9b9982af6317cfa"
+    },
+    "title": "Dr",
+    "firstName": "Julius",
+    "lastName": "Hibbert",
+    "emailAddress": "dr.hibbert@gmail.com",
+    "premiumMembership": false,
+    "createdAt": {
+        "$date": "2024-05-01T11:22:30.67Z"
+    },
+    "updatedAt": {
+        "$date": "2024-05-01T11:22:30.67Z"
+    },
+    "__v": 0
+},
+{
+    "_id": {
+        "$oid": "66322adc6c175254f8e5f4c4"
+    },
+    "title": "Mr",
+    "firstName": "Barney",
+    "lastName": "Gumble",
+    "emailAddress": "barney.gumble@gmail.com",
+    "premiumMembership": false,
+    "createdAt": {
+        "$date": "2024-05-01T11:43:24.853Z"
+    },
+    "updatedAt": {
+        "$date": "2024-05-01T11:43:24.853Z"
+    },
+    "__v": 0
+}]

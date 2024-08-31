@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="assignment-07.css">
+    
+</head>
+<body>
+
+
+    <!-- 
+            Bootstrap, W3 Schools, Bootsnipp  
+         1) https://bootsnipp.com/forms 
+         2) https://www.w3schools.com/bootstrap/bootstrap_forms_inputs2.asp  
+         I referenced these to create the styling for the below forms
+    -->
+
+    <br></br>
+    <div class="instruction-outer">
+        <div class="instruction-text"> <b>Web Information Processing - Gym</b> <br> <strong>Declan Davis</strong><br>
+        </div>
+    </div>
+
+
+    <!-- CREATE  -->
+    <div class="container mt-5">
+        <form class="form-horizontal" id="createUserForm">
+            <fieldset>
+            
+            <!-- Form Name -->
+            <legend>C - Create a Gym Member</legend>
+
+            <!-- Select Basic -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="selectbasic">Title</label>
+                <div class="col-md-4">
+                <select id="selectbasic" name="selectbasic" class="form-control">
+                    <option value="Mx">Mx</option>
+                    <option value="Ms">Ms</option>
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Miss">Miss</option>
+                    <option value="Dr">Dr</option>
+                    <option value="Other">Other</option>
+                </select>
+                </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label manditory-label" for="C-firstName">First Name</label>  
+              <div class="col-md-4">
+              <input id="C-firstName" name="C-firstName" type="text" placeholder="First Name" class="form-control input-md" required="">
+                
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label manditory-label" for="C-lastName">Last Name</label>  
+              <div class="col-md-4">
+              <input id="C-lastName" name="C-lastName" type="text" placeholder="Last Name" class="form-control input-md" required="">
+                
+              </div>
+            </div>
+                        
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label manditory-label" for="C-email">Email Address</label>  
+              <div class="col-md-4">
+              <input id="C-email" name="C-email" type="text" placeholder="Email Address" class="form-control input-md" required="">
+                
+              </div>
+            </div>
+
+            <!-- Drop down -->
+            <div class="form-group">
+                <label class="col-md-4 control-label manditory-label" for="C-premiumMembership">Premium Member</label>
+                <div class="col-md-4">
+                <select id="C-premiumMembership" name="C-premiumMembership" class="form-control">
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                </select>
+                </div>
+            </div>
+
+            
+                        <!-- Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="C-button"></label>
+                            <div class="col-md-4">
+                            <button id="C-button" name="C-button" class="btn btn-primary">Create Gym Member</button>
+                            </div>
+                        </div>
+            
+            
+            </fieldset>
+            </form>
+    </div>
+
+        <!-- -------------------------------------------------------- -->
+
+        <!-- RETRIEVE  -->
+        <div class="container mt-5">   
+          <form>
+              <!-- Form Name -->
+              <legend>R - Retrieve a Gym Member Randomly, by their Name, or All the Gym Members</legend>
+  
+              <!-- Text Input -->
+              <div class="mb-3">
+                  <label  class="form-label manditory-label" for="firstName">First Name</label>
+                  <input type="text" class="form-control" placeholder="Homer" id="firstName">
+              </div>
+              <div>
+                  <label class="form-label manditory-label" for="surname">Last Name</label>
+                  <input type="text" class="form-control" placeholder="Simpson" id="lastName">
+              </div>
+  
+              <!-- Buttons -->
+              <div class="mb-2">
+                  <div class="d-flex justify-content-between">
+              <button type="button" class="btn btn-primary" onclick="retrieveMatchingUsers()">Search</button>
+              <button type="button" class="btn btn-primary" onclick="retrieveAllUsers()">Retrieve All</button>
+              <button type="button" class="btn btn-primary" onclick="clearSearch()">Clear Search</button>
+              <button type="button" class="btn btn-primary" onclick="displayRandomUser()">Random Gym Member</button>
+                  </div>
+              </div> 
+              
+              <!-- Textarea In Page Console -->
+              <div class="form-group">
+                  <legend class="mb-2" >Results</legend>
+                      <div class="col-md-4">                     
+                      <textarea class="form-control mt-3" id="userList" name="userList" placeholder="In-page page console"></textarea>
+                      </div>
+              </div>
+  
+          </form>
+      </div>
+  
+      <!-- ------------------------------------------------- -->
+
+
+        <!-- UPDATE  -->
+        <div class="container mt-5">
+          <form class="form-horizontal" id="updateUserForm">
+              <fieldset>
+              
+              <!-- Form Name -->
+              <legend>U - Update a Gym Member</legend>
+  
+
+              <div class="instruction-outer">
+                <div class="instruction-text"> Enter the ID of the <b>Gym Member</b> you wish to update. <br>
+                  Then please fill in the new data in the manditory: 
+                  <br><b>Title</b>, <b>First Name</b>, <b>Last Name</b>, <b>Email Address</b> and <b>Premium Membership</b> inputs.<br> </div>
+              </div>
+
+              <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label manditory-label" for="U-ID">ID</label>  
+              <div class="col-md-4">
+              <input id="U-ID" name="U-ID" type="text" placeholder="ID" class="form-control input-md" required="">
+                
+              </div>
+            </div>
+
+              <!-- Select Basic -->
+              <div class="form-group">
+                  <label class="col-md-4 control-label manditory-label" for="U-selectbasic">Title</label>
+                  <div class="col-md-4">
+                  <select id="U-selectbasic" name="U-selectbasic" class="form-control" required="">
+                      <option value="Mx">Mx</option>
+                      <option value="Ms">Ms</option>
+                      <option value="Mr">Mr</option>
+                      <option value="Mrs">Mrs</option>
+                      <option value="Miss">Miss</option>
+                      <option value="Dr">Dr</option>
+                      <option value="Other">Other</option>
+                  </select>
+                  </div>
+              </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label manditory-label" for="U-firstName">First Name</label>  
+              <div class="col-md-4">
+              <input id="U-firstName" name="U-firstName" type="text" placeholder="First Name" class="form-control input-md" required="">
+                
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label manditory-label" for="U-lastName">Last Name</label>  
+              <div class="col-md-4">
+              <input id="U-lastName" name="U-lastName" type="text" placeholder="Last Name" class="form-control input-md" required="">
+                
+              </div>
+            </div>
+                        
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label manditory-label" for="U-email">Email Address</label>  
+              <div class="col-md-4">
+              <input id="U-email" name="U-email" type="text" placeholder="Email Address" class="form-control input-md" required="">
+                
+              </div>
+            </div>
+
+            <!-- Drop down -->
+            <div class="form-group">
+                <label class="col-md-4 control-label manditory-label" for="U-premiumMembership">Premium Member</label>
+                <div class="col-md-4">
+                <select id="U-premiumMembership" name="U-premiumMembership" class="form-control">
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                </select>
+                </div>
+            </div>
+
+          <!-- Button -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="U-button"></label>
+            <div class="col-md-4">
+            <button id="U-button" name="U-button" class="btn btn-primary">Update Gym Member</button>
+            </div>
+        </div>
+
+      </fieldset>
+    </form>
+ </div>
+            <!-- -------------------------------------------------------------------------------------------- -->
+
+    <!-- DELETE -->
+
+    <div class="container mt-5"> 
+      <form class="form-horizontal">
+        <fieldset>
+        
+        <!-- Form Name -->
+        <legend>D - Delete a Gym Member</legend>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label manditory-label" for="D-ID">ID</label>  
+          <div class="col-md-4">
+          <input id="D-ID" name="D-ID" type="text" placeholder="ID" class="form-control input-md" required="">
+            
+          </div>
+        </div>
+        
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="D-button"></label>
+          <div class="col-md-4">
+            <button id="D-button" name="D-button" class="btn btn-danger">Delete Gym Member</button>
+          </div>
+        </div>
+    </div>
+
+          </fieldset>
+      </form>
+   </div>
+
+    <br></br>
+
+
+
+    <!-------------------------------------------------------------------
+    --------------------------Gym Class----------------------------------
+    -------------------------------------------------------------------->
+
+        <!-- CREATE  -->
+        <div class="container mt-5">
+          <form class="form-horizontal" id="createGymClassForm">
+              <fieldset>
+              
+              <!-- Form Name -->
+              <legend>C - Create a Gym Class</legend>
+              
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label manditory-label" for="C-GymClass-className">Class Name</label>  
+                <div class="col-md-4">
+                <input id="C-GymClass-className" name="C-GymClass-className" type="text" placeholder="Class Name" class="form-control input-md" required="">
+                  
+                </div>
+              </div>
+              
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label manditory-label" for="C-GymClass-classDay">Class Day</label>  
+                <div class="col-md-4">
+                <input id="C-GymClass-classDay" name="C-GymClass-classDay" type="text" placeholder="Monday" class="form-control input-md" required="">
+                  
+                </div>
+              </div>
+                          
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label manditory-label" for="C-GymClass-sessionLengthHrs">Session Length (Hrs)</label>  
+                <div class="col-md-4">
+                <input id="C-GymClass-sessionLengthHrs" name="C-GymClass-sessionLengthHrs" type="text" placeholder="1" class="form-control input-md" required="">
+                  
+                </div>
+              </div>
+
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label manditory-label" for="C-GymClass-price">Price</label>  
+                <div class="col-md-4">
+                <input id="C-GymClass-price" name="C-GymClass-price" type="text" placeholder="19.99" class="form-control input-md" required="">
+                  
+                </div>
+              </div>
+  
+  
+              
+                          <!-- Button -->
+                          <div class="form-group">
+                              <label class="col-md-4 control-label" for="C-GymClass-button"></label>
+                              <div class="col-md-4">
+                              <button id="C-GymClass-button" name="C-GymClass-button" class="btn btn-primary">Create Gym Class</button>
+                              </div>
+                          </div>
+              
+              
+              </fieldset>
+              </form>
+      </div>
+  
+                  <!-- -------------------------------------------------------- -->
+
+        <!-- RETRIEVE  -->
+        <div class="container mt-5">   
+          <form>
+              <!-- Form Name -->
+              <legend>R - Retrieve a Gym Class Randomly, by it's Class Name, or All the Gym Classes</legend>
+  
+              <!-- Text Input -->
+              <div class="mb-3">
+                  <label  class="form-label manditory-label" for="R-GymClass-className">Class Name</label>
+                  <input type="text" class="form-control" placeholder="Cardio Bootcamp" id="R-GymClass-className">
+              </div>
+  
+              <!-- Buttons -->
+              <div class="mb-2">
+                  <div class="d-flex justify-content-between">
+              <button type="button" class="btn btn-primary" onclick="retrieveMatchingClassName()">Search</button>
+              <button type="button" class="btn btn-primary" onclick="retrieveAllClasses()">Retrieve All</button>
+              <button type="button" class="btn btn-primary" onclick="clearGymClassSearch()">Clear Search</button>
+              <button type="button" class="btn btn-primary" onclick="displayRandomGymClass()">Random Gym Class</button>
+                  </div>
+              </div> 
+              
+              <!-- Textarea In Page Console -->
+              <div class="form-group">
+                  <legend class="mb-2" >Results</legend>
+                      <div class="col-md-4">                     
+                      <textarea class="form-control mt-3" id="GymClassList" name="GymClassList" placeholder="In-page page console"></textarea>
+                      </div>
+              </div>
+  
+          </form>
+      </div>
+  
+      <!-- ------------------------------------------------- -->
+
+       <!-- UPDATE  -->
+       <div class="container mt-5">
+        <form class="form-horizontal" id="updateGymClassForm">
+            <fieldset>
+            
+            <!-- Form Name -->
+            <legend>U - Update a Gym Class</legend>
+
+
+            <div class="instruction-outer">
+              <div class="instruction-text"> Enter the ID of the <b>Gym Class</b> you wish to update. <br>
+                Then please fill in the new data in the manditory: 
+                <br><b>Class Name</b>, <b>Class Day</b>, <b>Session Length (Hrs)</b> and <b>Price</b> inputs.<br> </div>
+            </div>
+
+            <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label manditory-label" for="U-GymClass-ID">ID</label>  
+            <div class="col-md-4">
+            <input id="U-GymClass-ID" name="U-GymClass-ID" type="text" placeholder="ID" class="form-control input-md" required="">
+              
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label manditory-label" for="U-GymClass-ClassName">Class Name</label>  
+            <div class="col-md-4">
+            <input id="U-GymClass-ClassName" name="U-GymClass-ClassName" type="text" placeholder="Class Name" class="form-control input-md" required="">
+              
+            </div>
+          </div>
+          
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label manditory-label" for="U-GymClass-ClassDay">Class Day</label>  
+            <div class="col-md-4">
+            <input id="U-GymClass-ClassDay" name="U-GymClass-ClassDay" type="text" placeholder="Monday" class="form-control input-md" required="">
+              
+            </div>
+          </div>
+                      
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label manditory-label" for="U-GymClass-SessionLengthHrs">Session Length (Hrs)</label>  
+            <div class="col-md-4">
+            <input id="U-GymClass-SessionLengthHrs" name="U-GymClass-SessionLengthHrs" type="text" placeholder="1" class="form-control input-md" required="">
+              
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label manditory-label" for="U-GymClass-Price">Price</label>  
+            <div class="col-md-4">
+            <input id="U-GymClass-Price" name="U-GymClass-Price" type="text" placeholder="19.99" class="form-control input-md" required="">
+              
+            </div>
+          </div>
+
+
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="U-GymClass-button"></label>
+          <div class="col-md-4">
+          <button id="U-GymClass-button" name="U-button" class="btn btn-primary">Update Gym Class</button>
+          </div>
+      </div>
+
+    </fieldset>
+  </form>
+</div>
+          <!-- -------------------------------------------------------------------------------------------- -->
+
+
+             <!-- DELETE -->
+
+    <div class="container mt-5"> 
+      <form class="form-horizontal">
+        <fieldset>
+        
+        <!-- Form Name -->
+        <legend>D - Delete a Gym Class</legend>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label manditory-label" for="D-GymClass-ID">ID</label>  
+          <div class="col-md-4">
+          <input id="D-GymClass-ID" name="D-GymClass-ID" type="text" placeholder="ID" class="form-control input-md" required="">
+            
+          </div>
+        </div>
+        
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="D-GymClass-button"></label>
+          <div class="col-md-4">
+            <button id="D-GymClass-button" name="D-GymClass-button" class="btn btn-danger">Delete Gym Class</button>
+          </div>
+        </div>
+    </div>
+
+          </fieldset>
+      </form>
+   </div>
+
+    <br></br>
+
+    <!-------------------------------------------------------------------
+    --------------------------Member Class-------------------------------
+    -------------------------------------------------------------------->
+
+        <!-- CREATE  -->
+        <div class="container mt-5">
+          <form class="form-horizontal" id="createMemberClassForm">
+              <fieldset>
+              
+              <!-- Form Name -->
+              <legend>C - Create an Enrollment (Member Class)</legend>
+
+              <div class="instruction-outer">
+                <div class="instruction-text"> Enter the <b>ID</b> of the <b>Gym Member</b> <br>and the 
+                  <b>ID</b> of the <b>Gym Class</b> <br>they wish to enroll on.
+                <br> </div>
+              </div>
+              
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label manditory-label" for="C-GymMember-ID">Gym Member ID</label>  
+                <div class="col-md-4">
+                <input id="C-GymMember-ID" name="C-GymMember-ID" type="text" placeholder="Gym Member ID" class="form-control input-md" required="">
+                  
+                </div>
+              </div>
+              
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label manditory-label" for="C-GymClass-ID">Gym Class ID</label>  
+                <div class="col-md-4">
+                <input id="C-GymClass-ID" name="C-GymClass-ID" type="text" placeholder="Gym Class ID" class="form-control input-md" required="">
+                  
+                </div>
+              </div>  
+  
+              
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="C-memberClass-button"></label>
+                    <div class="col-md-4">
+                    <button id="C-memberClass-button" name="C-memberClass-button" class="btn btn-primary">Create Enrollment</button>
+                    </div>
+                </div>
+              
+                
+              
+              </fieldset>
+              </form>
+              
+      </div>
+  
+                  <!-- -------------------------------------------------------- -->
+
+                          <!-- RETRIEVE  -->
+        <div class="container mt-5">   
+          <form>
+              <!-- Form Name -->
+              <legend>R - Retrieve an Enrollment (Member Class) Randomly, the Enrollments of a Gym Member by entering their User ID, or All the Enrollments (Member Classes) in the entire gym.</legend>
+  
+              <!-- Text Input -->
+              <div class="mb-3">
+                  <label  class="form-label manditory-label" for="R-Enrollment-UserID">Gym Member ID</label>
+                  <input type="text" class="form-control" placeholder="Gym Member ID" id="R-Enrollment-UserID">
+              </div>
+  
+              <!-- Buttons -->
+              <div class="mb-2">
+                  <div class="d-flex justify-content-between">
+              <button type="button" class="btn btn-primary" onclick="retrieveMatchingUserID()">Search</button>
+              <button type="button" class="btn btn-primary" onclick="retrieveAllEnrollments()">Retrieve All</button>
+              <button type="button" class="btn btn-primary" onclick="clearEnrollmentSearch()">Clear Search</button>
+              <button type="button" class="btn btn-primary" onclick="displayRandomEnrollment()">Random Enrollment</button>
+                  </div>
+              </div> 
+              
+              <!-- Textarea In Page Console -->
+              <div class="form-group">
+                  <legend class="mb-2" >Results</legend>
+                      <div class="col-md-4">                     
+                      <textarea class="form-control mt-3" id="EnrollmentList" name="EnrollmentList" placeholder="In-page page console"></textarea>
+                      </div>
+              </div>
+  
+          </form>
+      </div>
+  
+      <!-- ------------------------------------------------- -->
+
+
+       <!-- UPDATE  -->
+       <div class="container mt-5">
+        <form class="form-horizontal" id="updateEnrollmentForm">
+            <fieldset>
+            
+            <!-- Form Name -->
+            <legend>U - Update an Enrollment (Member Class)</legend>
+
+
+            <div class="instruction-outer">
+              <div class="instruction-text"> Enter the ID of the <b>Enrollment (Member Class)</b> you wish to update. <br>
+                Then please fill in the new data in the manditory: 
+                <br><b>User ID</b> and <b>Class ID</b> inputs.<br> </div>
+            </div>
+
+            <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label manditory-label" for="U-Enrollment-ID">Enrollment (Member Class) ID</label>  
+            <div class="col-md-4">
+            <input id="U-Enrollment-ID" name="U-Enrollment-ID" type="text" placeholder="Enrollment (Member Class) ID" class="form-control input-md" required="">
+              
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label manditory-label" for="U-Enrollment-UserID">Gym Member ID</label>  
+            <div class="col-md-4">
+            <input id="U-Enrollment-UserID" name="U-Enrollment-UserID" type="text" placeholder="Gym Member ID" class="form-control input-md" required="">
+              
+            </div>
+          </div>
+          
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label manditory-label" for="U-Enrollment-ClassID">Gym Class ID</label>  
+            <div class="col-md-4">
+            <input id="U-Enrollment-ClassID" name="U-Enrollment-ClassID" type="text" placeholder="Gym Class ID" class="form-control input-md" required="">
+              
+            </div>
+          </div>
+                      
+
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="U-Enrollment-button"></label>
+          <div class="col-md-4">
+          <button id="U-Enrollment-button" name="U-Enrollment-button" class="btn btn-primary">Update Enrollment (Member Class)</button>
+          </div>
+      </div>
+
+    </fieldset>
+  </form>
+</div>
+          <!-- -------------------------------------------------------------------------------------------- -->
+
+          <!-- DELETE -->
+
+    <div class="container mt-5"> 
+      <form class="form-horizontal">
+        <fieldset>
+        
+        <!-- Form Name -->
+        <legend>D - Delete an Enrollment (Member Class)</legend>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label manditory-label" for="D-Enrollment-ID">Enrollment (Member Class) ID</label>  
+          <div class="col-md-4">
+          <input id="D-Enrollment-ID" name="D-Enrollment-ID" type="text" placeholder="Enrollment (Member Class) ID" class="form-control input-md" required="">
+            
+          </div>
+        </div>
+        
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="D-Enrollment-button"></label>
+          <div class="col-md-4">
+            <button id="D-Enrollment-button" name="D-Enrollment-button" class="btn btn-danger">Delete Enrollment (Member Class)</button>
+          </div>
+        </div>
+    </div>
+
+          </fieldset>
+      </form>
+   </div>
+
+    <br><br>
+</body>
+
+<!-- JQuery import -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Javascript files -->
+<script src="assignment-07-gymMemberCRUD.js"></script>
+<script src="assignment-07-gymClassCRUD.js"></script>
+<script src="assignment-07-memberClassCRUD.js"></script>
+
+</html>

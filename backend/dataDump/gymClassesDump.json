@@ -1,0 +1,104 @@
+[ 
+{
+    "_id": {
+        "$oid": "66326be8b936a36a1a6d6a45"
+    },
+    "className": "Cardio Workout",
+    "classDay": "Tuesday",
+    "sessionLengthHrs": 2,
+    "price": 18.88,
+    "currentNumberOfMembers": 2,
+    "createdAt": {
+        "$date": "2024-05-01T16:20:56.05Z"
+    },
+    "updatedAt": {
+        "$date": "2024-05-05T19:58:52.871Z"
+    },
+    "__v": 0
+},
+{
+    "_id": {
+        "$oid": "66326c28b936a36a1a6d6a47"
+    },
+    "className": "Boxing Bootcamp",
+    "classDay": "Monday",
+    "sessionLengthHrs": 1,
+    "price": 15.99,
+    "currentNumberOfMembers": 5,
+    "createdAt": {
+        "$date": "2024-05-01T16:22:00.24Z"
+    },
+    "updatedAt": {
+        "$date": "2024-05-05T14:52:20.068Z"
+    },
+    "__v": 0
+},
+{
+    "_id": {
+        "$oid": "6632742722c0cab7c66c3d19"
+    },
+    "className": "Glutes and Guns",
+    "classDay": "Friday",
+    "sessionLengthHrs": 1,
+    "price": 7.99,
+    "currentNumberOfMembers": 5,
+    "createdAt": {
+        "$date": "2024-05-01T16:56:07.401Z"
+    },
+    "updatedAt": {
+        "$date": "2024-05-05T14:56:43.68Z"
+    },
+    "__v": 0
+},
+{
+    "_id": {
+        "$oid": "663275d43adff1782f55687d"
+    },
+    "className": "Firm Buns",
+    "classDay": "Friday",
+    "sessionLengthHrs": 1,
+    "price": 12.99,
+    "currentNumberOfMembers": 4,
+    "createdAt": {
+        "$date": "2024-05-01T17:03:16.062Z"
+    },
+    "updatedAt": {
+        "$date": "2024-05-04T20:27:11.137Z"
+    },
+    "__v": 0
+},
+{
+    "_id": {
+        "$oid": "66354b12dd685c7b0d4660b7"
+    },
+    "className": "BodyFat Burn Circuit",
+    "classDay": "Thursday",
+    "sessionLengthHrs": 1,
+    "price": 18.99,
+    "currentNumberOfMembers": 2,
+    "createdAt": {
+        "$date": "2024-05-03T20:37:38.284Z"
+    },
+    "updatedAt": {
+        "$date": "2024-05-05T19:59:43.135Z"
+    },
+    "__v": 0
+},
+{
+    "_id": {
+        "$oid": "663675c50c5c91d7f72c1291"
+    },
+    "className": "Legs Workout",
+    "classDay": "Thursday",
+    "sessionLengthHrs": 2,
+    "price": 21.99,
+    "currentNumberOfMembers": 4,
+    "createdAt": {
+        "$date": "2024-05-04T17:52:05.552Z"
+    },
+    "updatedAt": {
+        "$date": "2024-05-05T20:07:31.599Z"
+    },
+    "__v": 0
+}
+]

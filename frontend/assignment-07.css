@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(206, 206, 206);
+}
+
+.manditory-label::after {
+    content: "*";
+    color:red;
+    margin-left:5px;
+}
+
+.mt-5 {
+    background-color: rgba(255, 255, 255, 0.631);
+    padding: 20px;
+    border-radius: 10px; /*Rounded corners*/
+    margin-top: 10px;
+}
+
+.mb-2{
+    margin-top: 10px;
+}
+
+.flex-container{
+    display: flex;
+}
+
+.instruction-outer{
+    display: flex;
+    justify-content: center;
+}
+.instruction-text {
+    text-align: center; /* Center align the text */
+    margin-bottom: 20px; /* Add some bottom margin for spacing */
+    font-size: 16px; 
+    background-color: rgba(255, 255, 255, 0.852);
+    padding: 20px;
+    border-radius: 10px; /*Rounded corners*/
+    margin-top: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.361);
+    max-width: 600px;
+}
