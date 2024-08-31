@@ -6,6 +6,7 @@ This is a web-based application for a **Gym** maintaining a database of `gymMemb
 This project was made as part of two assignments, assignment 06 and 07, from my module, **Web Information Processing** in Maynooth University, National University of Ireland Maynooth.
 
 Assignment 06 - Build the Backend: a Node.js application that implements the RESTful API functionality for gym members, classes and enrollments.
+
 Assignment 07 - Build the Frontend which consumes the Restful API from assignment 06.
 
 ## Technologies Used
@@ -82,15 +83,15 @@ Assignment 07 - Build the Frontend which consumes the Restful API from assignmen
      ```
      </body>
 
-<!-- JQuery import -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-<!-- Javascript files -->
-<script src="assignment-07-gymClassCRUD.js"></script>
-<script src="assignment-07-gymMemberCRUD.js"></script>
-<script src="assignment-07-memberClassCRUD.js"></script>
-
-</html>
+   <!-- JQuery import -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   
+   <!-- Javascript files -->
+   <script src="assignment-07-gymClassCRUD.js"></script>
+   <script src="assignment-07-gymMemberCRUD.js"></script>
+   <script src="assignment-07-memberClassCRUD.js"></script>
+   
+   </html>
      ```
 
 4. **Run the Frontend:**
