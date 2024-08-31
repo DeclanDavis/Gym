@@ -6,6 +6,7 @@ This is a web-based application for a **Gym** maintaining a database of `gymMemb
 This project was made as part of two assignments, assignment 06 and 07, from my module, **Web Information Processing** in Maynooth University, National University of Ireland Maynooth.
 
 Assignment 06 - Build the Backend: a Node.js application that implements the RESTful API functionality for gym members, classes and enrollments.
+
 Assignment 07 - Build the Frontend which consumes the Restful API from assignment 06.
 
 ## Technologies Used
