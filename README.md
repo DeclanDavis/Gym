@@ -83,15 +83,15 @@ Assignment 07 - Build the Frontend which consumes the Restful API from assignmen
      ```
      </body>
 
-<!-- JQuery import -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-<!-- Javascript files -->
-<script src="assignment-07-gymClassCRUD.js"></script>
-<script src="assignment-07-gymMemberCRUD.js"></script>
-<script src="assignment-07-memberClassCRUD.js"></script>
-
-</html>
+   <!-- JQuery import -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   
+   <!-- Javascript files -->
+   <script src="assignment-07-gymClassCRUD.js"></script>
+   <script src="assignment-07-gymMemberCRUD.js"></script>
+   <script src="assignment-07-memberClassCRUD.js"></script>
+   
+   </html>
      ```
 
 4. **Run the Frontend:**
